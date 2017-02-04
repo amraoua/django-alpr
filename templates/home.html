@@ -11,7 +11,7 @@
     <h2>Check for plate</h2>
 
     <p id="plate"></p>
-    <img id="shot" src="./alpr.jpg">
+    <img id="shot" src="./alpr_capture.jpg">
     <a id="checkLink" href="#">NOW!</a>
 </div>
 </body>
@@ -21,9 +21,10 @@
         var triggered = event.timeStamp;
         $.get(('check'), function (data) {
             $('#plate').html(data);
-            $('#shot').attr('src', 'alpr.jpeg?t=' + triggered)
+            $('#shot').attr('src', 'alpr_capture.jpeg?t=' + triggered)
         });
     });
 
 </script>
 </html>
+
