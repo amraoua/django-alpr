@@ -1,4 +1,3 @@
-import json as libjson
 from LicensesPlates import PlateReader
 from django.shortcuts import render
 from django.template import RequestContext
