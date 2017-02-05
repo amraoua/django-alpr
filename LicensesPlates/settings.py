@@ -93,6 +93,6 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = '/var/www/static/'
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (
+TEMPLATE_DIRS = [
     os.path.join(BASE_DIR, 'templates'),
-)
+]
