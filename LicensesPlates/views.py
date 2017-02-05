@@ -8,7 +8,7 @@ from django.template import RequestContext, loader
 def home(request):
     template = loader.get_template('home.html')
     context = RequestContext(request)
-    return HttpResponse(render(template(context)))
+    return render(request, template, context)
 
 
 def capturePlate(request):
@@ -17,4 +17,4 @@ def capturePlate(request):
     results = response.get('results')
     template = loader.get_template('check.html')
     context = RequestContext(request, {'plate': results[0].get('plate'), 'confidence': results[0].get('confidence')})
-    return HttpResponse(render(template(context)))
+    return render(request, template, context)
