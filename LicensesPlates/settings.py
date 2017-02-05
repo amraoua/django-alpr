@@ -22,7 +22,7 @@ SECRET_KEY = '@wb^kn(5ik@6lyyt(206129#mc4j@1@y(bxh4wnk57c#$q=0xy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+# TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['192.168.0.31', '127.0.0.1']
 
@@ -50,6 +50,22 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'LicensesPlates.urls'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 WSGI_APPLICATION = 'LicensesPlates.wsgi.application'
 
@@ -97,18 +113,6 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = '/var/www/media/'
 MEDIA_URL = '/media/'
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
+
+
+
