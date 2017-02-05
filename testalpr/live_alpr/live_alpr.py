@@ -19,7 +19,7 @@ parser.add_argument("-d", "--runtime_data", dest="runtime_dir", action="store", 
 parser.add_argument("-p", "--image_folder", dest="image_folder", action="store", default="/home/pi/Documents/projects/django-alpr/testalpr/live_alpr/images/",
                     help="Path to images that will automaticly be processed")
                     
-parser.add_argument("-f", "--csv_file", dest="csv_file", action="store", default="./database.csv",
+parser.add_argument("-f", "--csv_file", dest="csv_file", action="store", default="/home/pi/Documents/projects/django-alpr/testalpr/live_alpr/database.csv",
                     help="Path to the csv file that license plates will be matched to")
                     
 parser.add_argument("-t", "--move_to", dest="image_dest", action="store", default="/home/pi/Documents/projects/django-alpr/testalpr/live_alpr/images/done/",
