@@ -4,11 +4,11 @@ import json, shlex, subprocess
 class PlateReader:
     def __init__(self):
         # webcam subprocess args
-        webcam_command = "fswebcam -r 640x480 -S 20 --no-banner --quiet ./templates/alpr_capture.jpg"
+        webcam_command = "fswebcam -r 1280x720 -S 20 --no-banner --quiet ./templates/alpr_capture.jpg"
         self.webcam_command_args = shlex.split(webcam_command)
 
         # alpr subprocess args
-        alpr_command = "alpr -c eu -n 300 -j ./templates/alpr_capture.jpg"
+        alpr_command = "alpr -c eu -n 10 -j ./templates/alpr_capture.jpg"
         self.alpr_command_args = shlex.split(alpr_command)
 
     def webcam_subprocess(self):

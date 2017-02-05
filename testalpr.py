@@ -20,7 +20,7 @@ alpr.set_top_n(20)
 # alpr.set_default_region("md")
 
 # Recognize an image file.  You could alternatively provide the image bytes in-memory.
-results = alpr.recognize_file("/templates/alpr_capture.jpg")
+results = alpr.recognize_file("/home/pi/Documents/projects/django-alpr/templates/alpr_capture.jpg")
 
 # Iterate through the results.  There may be multiple plates in an image,
 # and each plate returns the top N candidates.
