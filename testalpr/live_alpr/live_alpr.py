@@ -16,13 +16,13 @@ parser.add_argument("-i", "--config_file", dest="config_file", action="store", d
 parser.add_argument("-d", "--runtime_data", dest="runtime_dir", action="store", default="/home/pi/openalpr3/runtime_data",
                     help="Path to openalpr runtime data directory")
                     
-parser.add_argument("-p", "--image_folder", dest="image_folder", action="store", default="./images/",
+parser.add_argument("-p", "--image_folder", dest="image_folder", action="store", default="/home/pi/Documents/projects/django-alpr/testalpr/live_alpr/images/",
                     help="Path to images that will automaticly be processed")
                     
 parser.add_argument("-f", "--csv_file", dest="csv_file", action="store", default="./database.csv",
                     help="Path to the csv file that license plates will be matched to")
                     
-parser.add_argument("-t", "--move_to", dest="image_dest", action="store", default="./images/done/",
+parser.add_argument("-t", "--move_to", dest="image_dest", action="store", default="/home/pi/Documents/projects/django-alpr/testalpr/live_alpr/images/done/",
                     help="Path to moce processed images to when done")
                     
 parser.add_argument("-v", "--verbose", dest="verbose", action="store", default="true")
