@@ -90,9 +90,9 @@ USE_TZ = True
 STATIC_ROOT = '/var/www/static/'
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.dirname(BASE_DIR, "static"),
-]
+#STATICFILES_DIRS = [
+#    os.path.dirname(BASE_DIR, "static"),
+#]
 
 MEDIA_ROOT = '/var/www/media/'
 MEDIA_URL = '/media/'
