@@ -12,10 +12,10 @@ class PlateReader:
         self.alpr_command_args = shlex.split(alpr_command)
 
     def webcam_subprocess(self):
-        return subprocess.Popen(self.webcam_command_args, stdout=subprocess.PIPE)
+        return subprocess.Popen(self.webcam_command_args, stdout=subprocess.PIPE, shell=False)
 
     def alpr_subprocess(self):
-        return subprocess.Popen(self.alpr_command_args, stdout=subprocess.PIPE)
+        return subprocess.Popen(self.alpr_command_args, stdout=subprocess.PIPE, shell=False)
 
     def alpr_json_results(self):
         self.webcam_subprocess().communicate()
