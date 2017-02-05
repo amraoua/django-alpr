@@ -3,7 +3,7 @@ from openalpr import Alpr
 
 # Initialize the library using United States style license plates.
 # You can use other countries/regions as well (for example: "eu", "au", or "kr")
-alpr = Alpr("eu", "/openalpr3/config/openalpr.conf.defaults", "/openalpr3/runtime_data")
+alpr = Alpr("eu", "/home/pi/openalpr3/config/openalpr.conf.defaults", "/home/pi/openalpr3/runtime_data")
 
 
 # Make sure the library loaded before continuing.
