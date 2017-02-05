@@ -2,7 +2,7 @@ from openalpr import Alpr
 from argparse import ArgumentParser
 import csv, os, sys, threading
 
-parser = ArgumentParser(description="Live ALPR by Roger Brooks")
+parser = ArgumentParser(description="Live ALPR")
 
 parser.add_argument("-c", "--country", dest="country", action="store", default="eu",
                     help="License plate Country of Origin")
