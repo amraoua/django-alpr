@@ -4,7 +4,7 @@ from django.template import RequestContext
 
 def home(request):
     context = RequestContext(request)
-    return render(request, 'home.html', context)
+    return render(request, 'home.html')
 
 
 def capturePlate(request):
