@@ -51,7 +51,7 @@ def search_database(lpNumber):
                                 return ""
 
 
-def proccess_results(fileName, results):
+def process_results(fileName, results):
         for plate in results['results']:
                 for candidate in plate['candidates']:
                         resultStr = search_database(candidate['plate'])
@@ -61,12 +61,12 @@ def proccess_results(fileName, results):
                                 print("%-24s%-12s%-6.2s%-40s" % (fileName, candidate['plate'],candidate['confidence'], "No match"))
 
 
-def proccess_images():
+def process_images():
         for file in os.listdir(options.image_folder):
                 if file.endswith(".jpg") or file.endswith(".png"):
                         results = alpr.recognize_file(options.image_folder + file)
-                        proccess_results(file, results)
+                        process_results(file, results)
                         os.rename(options.image_folder + file, options.image_dest + file)
-        threading.Timer(1, proccess_images).start()
+        threading.Timer(1, process_images).start()
         
-proccess_images()
+process_images()
