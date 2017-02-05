@@ -1,0 +1,171 @@
+{
+  "version": 2,
+  "data_type": "alpr_results",
+  "epoch_time": 1486319954592,
+  "img_width": 1280,
+  "img_height": 720,
+  "processing_time_ms": 2252.413330,
+  "regions_of_interest": [],
+  "results": [
+    {
+      "plate": "JP9D1",
+      "confidence": 86.230667,
+      "matches_template": 0,
+      "plate_index": 0,
+      "region": "",
+      "region_confidence": 0,
+      "processing_time_ms": 167.257645,
+      "requested_topn": 10,
+      "coordinates": [
+        {
+          "x": 419,
+          "y": 286
+        },
+        {
+          "x": 538,
+          "y": 283
+        },
+        {
+          "x": 542,
+          "y": 339
+        },
+        {
+          "x": 424,
+          "y": 344
+        }
+      ],
+      "candidates": [
+        {
+          "plate": "JP9D1",
+          "confidence": 86.230667,
+          "matches_template": 0
+        },
+        {
+          "plate": "JP91",
+          "confidence": 80.349831,
+          "matches_template": 0
+        },
+        {
+          "plate": "JP9O1",
+          "confidence": 79.642288,
+          "matches_template": 0
+        },
+        {
+          "plate": "JP9B1",
+          "confidence": 78.762230,
+          "matches_template": 0
+        },
+        {
+          "plate": "JP981",
+          "confidence": 78.378075,
+          "matches_template": 0
+        },
+        {
+          "plate": "JP9U1",
+          "confidence": 77.693481,
+          "matches_template": 0
+        },
+        {
+          "plate": "JP9D",
+          "confidence": 71.510834,
+          "matches_template": 0
+        },
+        {
+          "plate": "JP9O",
+          "confidence": 64.922455,
+          "matches_template": 0
+        },
+        {
+          "plate": "JP9B",
+          "confidence": 64.042397,
+          "matches_template": 0
+        },
+        {
+          "plate": "JP98",
+          "confidence": 63.658237,
+          "matches_template": 0
+        }
+      ]
+    },
+    {
+      "plate": "1ANS",
+      "confidence": 82.344208,
+      "matches_template": 0,
+      "plate_index": 1,
+      "region": "",
+      "region_confidence": 0,
+      "processing_time_ms": 106.373032,
+      "requested_topn": 10,
+      "coordinates": [
+        {
+          "x": 412,
+          "y": 256
+        },
+        {
+          "x": 504,
+          "y": 252
+        },
+        {
+          "x": 508,
+          "y": 292
+        },
+        {
+          "x": 415,
+          "y": 295
+        }
+      ],
+      "candidates": [
+        {
+          "plate": "1ANS",
+          "confidence": 82.344208,
+          "matches_template": 0
+        },
+        {
+          "plate": "14NS",
+          "confidence": 69.968689,
+          "matches_template": 0
+        },
+        {
+          "plate": "1AHS",
+          "confidence": 68.138298,
+          "matches_template": 0
+        },
+        {
+          "plate": "IANS",
+          "confidence": 66.923264,
+          "matches_template": 0
+        },
+        {
+          "plate": "1AN5",
+          "confidence": 66.794548,
+          "matches_template": 0
+        },
+        {
+          "plate": "1ARS",
+          "confidence": 65.559937,
+          "matches_template": 0
+        },
+        {
+          "plate": "1AMS",
+          "confidence": 65.350708,
+          "matches_template": 0
+        },
+        {
+          "plate": "14HS",
+          "confidence": 55.762779,
+          "matches_template": 0
+        },
+        {
+          "plate": "I4NS",
+          "confidence": 54.547745,
+          "matches_template": 0
+        },
+        {
+          "plate": "14N5",
+          "confidence": 54.419025,
+          "matches_template": 0
+        }
+      ]
+    }
+  ]
+}
