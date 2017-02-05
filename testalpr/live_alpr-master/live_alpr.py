@@ -4,10 +4,10 @@ import csv, os, sys, threading
 
 parser = ArgumentParser(description="Live ALPR by Roger Brooks")
 
-parser.add_argument("-c", "--country", dest="country", action="store", default="us",
+parser.add_argument("-c", "--country", dest="country", action="store", default="eu",
                     help="License plate Country of Origin")
                     
-parser.add_argument("-r", "--region", dest="region", action="store", default="in",
+parser.add_argument("-r", "--region", dest="region", action="store", default="",
                     help="License plate Regions of Origin")
                     
 parser.add_argument("-i", "--config_file", dest="config_file", action="store", default="/home/pi/openalpr3/config/openalpr.conf.defaults",
@@ -36,9 +36,10 @@ if not alpr.is_loaded():
         sys.exit(1)
 
 alpr.set_top_n(20)
-alpr.set_default_region(options.region)
+#alpr.set_default_region(options.region)
 
 print("%-24s%-12s%-6s%-40s" % ("Image Name", "Plate", "Conf", "Details"))
+
 
 def search_database(lpNumber):
         with open(options.csv_file) as database:
@@ -48,7 +49,8 @@ def search_database(lpNumber):
                                 return row['LastName'] + ", " + row['FirstName'] + " " + row['Department']
                         else:
                                 return ""
-                        
+
+
 def proccess_results(fileName, results):
         for plate in results['results']:
                 for candidate in plate['candidates']:
@@ -57,7 +59,8 @@ def proccess_results(fileName, results):
                                 print("%-24s%-12s%-6.2f%-40s" % (fileName, candidate['plate'], candidate['confidence'], resultStr))
                         elif options.verbose == "true":
                                 print("%-24s%-12s%-6.2s%-40s" % (fileName, candidate['plate'],candidate['confidence'], "No match"))
-                                
+
+
 def proccess_images():
         for file in os.listdir(options.image_folder):
                 if file.endswith(".jpg") or file.endswith(".png"):
