@@ -97,6 +97,10 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = '/var/www/media/'
 MEDIA_URL = '/media/'
 
-TEMPLATE_DIRS = [
-    os.path.join(BASE_DIR, 'templates'),
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+        'DIRS': os.path.join(BASE_DIR, 'templates'),
+    },
 ]
